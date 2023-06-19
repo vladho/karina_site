@@ -6,7 +6,7 @@ import Modal from "../../Modal/Modal";
 import Image from "next/image";
 import { images } from "../../../../public/images/images";
 
-const ImageGalleryItem = (src) => {
+const ImageGalleryItem = ({ path, alt }) => {
   // console.log(images);
   const [isOpen, setIsOpen] = useState(false);
   // console.log(isOpen);
@@ -26,20 +26,20 @@ const ImageGalleryItem = (src) => {
         onClick={openModal}
         alt=""
       /> */}
-      {images.map((image, index) => (
-        <Image
-          key={index}
-          src={image.path}
-          alt={image.alt}
-          onClick={openModal}
-          className={styles.image}
-          // fill
-          width={1440}
-          height={1800}
-          // loading="lazy"
-          priority={true}
-        />
-      ))}
+      {/* {images.map((image, index) => ( */}
+      <Image
+        // key={index}
+        src={path}
+        alt={alt}
+        onClick={openModal}
+        className={styles.image}
+        // fill
+        width={1440}
+        height={1800}
+        // loading="lazy"
+        priority={true}
+      />
+      {/* ))} */}
 
       {isOpen && (
         <Modal isOpen={isOpen} onClose={closeModal}>
