@@ -15,4 +15,16 @@ export const images = [
     path: "/images/image4.jpg",
     alt: "Зображення 4",
   },
+  {
+    path: "/images/image5.jpg",
+    alt: "Зображення 4",
+  },
+  {
+    path: "/images/image6.jpg",
+    alt: "Зображення 4",
+  },
+  {
+    path: "/images/image7.jpg",
+    alt: "Зображення 4",
+  },
 ];
